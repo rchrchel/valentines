@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, My Love</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">For You, RifatoOo 💕</h1>
+        <p id="letter"></p>
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+    <script>
+       const letterText = `Dear, RifatoOo,<br><br>
+Happy Valentine’s Day. I know we are no longer together, and maybe this letter will seem out of place, but I couldn’t let today pass without telling you how much you still mean to me. you have always been, and always will be, someone incredibly special in my life.<br><br>
+loving you was one of the most beautiful things that ever happened to me. every moment we shared, every laugh, every deep conversation, and even the silences in between... I cherish them all. you were my greatest love, and no amount of time or distance will ever change that.<br><br>
+I still think about you, about us, about the way you made my world brighter just by existing in it. there are so many things I wish I could say, so many things I wish I could relive, but most of all, I just want you to know that I will always carry you in my heart.<br><br>
+even though our paths have diverged, my love for you has not faded. it has simply transformed into something softer, i will always wish you happiness. you deserve the world, and I hope that wherever life takes you, you find the love, peace, and joy that you once gave me.<br><br>
+no matter what happens, you were my greatest love story, and I will always be grateful for the time we had together.<br><br>
+with all my love,<br>
+Rachel Anastasya`;
+
+let i = 0;
+function typeWriter() {
+    if (i < letterText.length) {
+        document.getElementById("letter").innerHTML = letterText.substring(0, i) + (i % 2 ? " |" : ""); // Efek kursor
+        i++;
+        setTimeout(typeWriter,80);
+    } else {
+        document.getElementById("letter").innerHTML = letterText; // Hapus kursor setelah selesai
+    }
+}
+window.onload = typeWriter;
+
+    </script>
+</body>
+</html>

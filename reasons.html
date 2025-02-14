@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reasons I Appreciate You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">Reasons I Appreciate Rifat Syauqi 💖</h1>
+        <p id="reason-text">Click below to see why!</p>
+        <button onclick="showReason()">Show Reason</button>
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+    <script>
+        const reasons = [
+            "your presence, even from afar",
+            "the way you listens",
+            "your patience with me",
+            "the moments of softness",
+            "you are someone i can trust",
+            "you are my safe space",
+            "you have your own ambitions",
+            "you are kind, even when you don't realize it",
+            "you are a beautiful person, inside and out",
+            "even when we're apart, i feel close to you",
+            "how you makes me feel special",
+            "you are a part of my favorite moments",
+            "simply because you are Rifat Syauqi💖"
+
+        ];
+        function showReason() {
+            const randomIndex = Math.floor(Math.random() * reasons.length);
+            document.getElementById("reason-text").innerText = reasons[randomIndex];
+        }
+    </script>
+</body>
+</html>

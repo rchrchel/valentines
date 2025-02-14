@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow">Click the Cookie to Reveal Your Fortune! 🍪</h1>
+        
+        <img src="fortune-cookie.png" alt="Fortune Cookie" class="cookie-img" onclick="generateFortune()">
+        
+        <p id="fortune-text"></p>
+
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+    <script>
+        function generateFortune() {
+            const fortunes = [
+                "i dont believe in fate, but i believe in you 💕",
+                "no matter where we stand, you will always be part of my favorite memories ❤",
+                "even in another timeline, i think we'd still find each other 🎁",
+                "you are loved more than you know 🥰",
+                "trust in the journey, it’s leading you to happiness ✨",
+                "your kindness will return to you tenfold 💖",
+                "your smile has always been my favorite kind of luck 📸"
+            ];
+            
+            const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+            document.getElementById("fortune-text").innerText = randomFortune;
+        }
+    </script>
+</body>
+</html>
